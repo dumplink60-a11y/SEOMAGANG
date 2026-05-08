@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html amp lang="en-ID">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}"
+    />
+    <meta name="robots" content="index,follow" />
+    <link href="{{favicon}}" rel="shortcut icon" type="image/x-icon" />
+    <link rel="canonical" href="{{canonical}}">
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="og:site_name" content="{{brand_name}}" />
+    <meta property="og:image" content="{{banner}}" />
+    <link rel="alternate" href="{{canonical}}" hreflang="id" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "{{brand_name}}",
+            "alternateName": "{{title}}",
+            "url": "{{canonical}}",
+            "logo": "{{logo}}",
+            "description": "{{description}}",
+            "sameAs": [
+                "{{description}}",
+                "https://twitter.com/{{brand_name}}"
+            ]
+        }
+    </script>
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: monospace;
+            position: relative;
+            background: #000;
+            background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .7)), url({{banner}});
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        .container {
+            max-width: 400px;
+            min-height: 100vh;
+            height: auto;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .welcome {
+            max-width: 350px;
+            margin: 0 auto
+        }
+
+        .welcome h1 {
+            font-size: 12px;
+            color: #fff;
+            overflow: hidden;
+            border-right: .15em solid #fbf4a0;
+            white-space: nowrap;
+            letter-spacing: .09em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite
+        }
+
+        h2 {
+            font-size: 12px;
+            color: #fff;
+            overflow: hidden;
+            border-right: .15em solid #fbf4a0;
+            white-space: nowrap;
+            letter-spacing: .09em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent
+            }
+            50% {
+                border-color: #fbf4a0
+            }
+        }
+
+        .banner {
+            border-radius: 10px;
+            overflow: hidden
+        }
+
+        .banner img {
+            object-fit: cover;
+            border-radius: 10px
+        }
+
+        .btn-login {
+            padding: 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            background: linear-gradient(to bottom, #111111 100%, rgb(0 0 0) 0);
+            margin-top: 10px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 10px #e1e1e1;
+            flex-shrink: 0
+        }
+
+        .btn-daftar {
+            padding: 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            background: linear-gradient(to bottom, #0600ff 100%, rgb(255, 0, 0) 0);
+            margin-top: 10px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 10px #ff007e;
+            flex-shrink: 0
+        }
+
+        .copyright {
+            text-align: center;
+            color: #ffffff96;
+            margin-top: 12px;
+            flex-shrink: 0
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <center>
+                <amp-img id="image" class="animated tada infinite slower" src="{{logo}}" alt="{{brand_name}}" width="310" height="80" layout="intrinsic"></amp-img>
+        </header>
+        <div class="welcome">
+            <h1>{{brand_name}} Terpercaya & Resmi</h1>
+        </div>
+        <amp-img src="{{banner}}" width="500" height="500" layout="intrinsic" class="banner"></amp-img>
+        <div class="welcome">
+            <h2>Selamat Datang Di {{brand_name}}, Enjoy!</h2>
+        </div>
+        <a href="{{moneysite-link}}" target="_blank" rel="noopener" role="button" class="btn-login" style="text-shadow:0 0 3px #000,0 0 6px #000,0 0 12px #000,0 0 20px #000;">LOGIN DISINI</a>
+        <a href="{{moneysite-link}}" target="_blank" rel="noopener" role="button" class="btn-login" style="text-shadow:0 0 3px #000,0 0 6px #000,0 0 12px #000,0 0 20px #000;">DAFTAR DISINI</a>
+        <p class="copyright">© 2026 • <a style="color:white" href="{{canonical}}">{{brand_name}}</a> • By SEO {{brand_name}}.</p>
+    </div>
+</body>
+
+</html>
