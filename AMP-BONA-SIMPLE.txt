@@ -1,0 +1,371 @@
+
+
+
+
+
+
+<!doctype html>
+<html amp lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <link rel="canonical" href="{{canonical}}">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{brand_name}}, SITUS SLOT, SLOT 88, SLOT, 88">
+  <meta name="author" content="{{brand_name}}">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="{{brand_name}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{banner}}">
+  <link rel="icon" href="{{favicon}}">
+  <link rel="apple-touch-icon" href="{{favicon}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+    }
+    @-webkit-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+    @-moz-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+    @-ms-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+    @-o-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+    @keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+  </style>
+
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+      }
+    </style>
+  </noscript>
+
+  <style amp-custom>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.08) 0, transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.08) 0, transparent 20%),
+        radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.05) 0, transparent 25%);
+    }
+
+    .snow,
+    .snow::before,
+    .snow::after {
+      content: "";
+      position: fixed;
+      top: -120%;
+      left: 0;
+      width: 100%;
+      height: 220%;
+      pointer-events: none;
+      z-index: 1;
+      background-repeat: repeat;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .snow {
+      background-image:
+        radial-gradient(circle, #cf00b3 1.2px, transparent 1.6px),
+        radial-gradient(circle, #cf00c5 2px, transparent 2.4px),
+        radial-gradient(circle, #ff5050cc 1.5px, transparent 2px);
+      background-size: 120px 120px, 180px 180px, 240px 240px;
+      background-position: 0 0, 40px 70px, 90px 20px;
+      filter: drop-shadow(0 0 5px #cf00c5);
+      animation: snowFall1 18s linear infinite;
+    }
+
+    .snow::before {
+      background-image:
+        radial-gradient(circle, #cf00c5 1.5px, transparent 2px),
+        radial-gradient(circle, #cf00c5 2.2px, transparent 2.8px);
+      background-size: 160px 160px, 220px 220px;
+      background-position: 20px 20px, 100px 120px;
+      opacity: 0.85;
+      filter: drop-shadow(0 0 6px #ff0000bf);
+      animation: snowFall2 24s linear infinite;
+    }
+
+    .snow::after {
+      background-image:
+        radial-gradient(circle, #cf00c5 2px, transparent 2.6px),
+        radial-gradient(circle, #cf00c5 1.3px, transparent 1.8px);
+      background-size: 200px 200px, 140px 140px;
+      background-position: 60px 50px, 10px 100px;
+      opacity: 0.65;
+      filter: drop-shadow(0 0 8px #cf00c5);
+      animation: snowFall3 30s linear infinite;
+    }
+
+    @keyframes snowFall1 {
+      from { transform: translateY(0); }
+      to { transform: translateY(55%); }
+    }
+
+    @keyframes snowFall2 {
+      from { transform: translateY(0) translateX(0); }
+      to { transform: translateY(60%) translateX(20px); }
+    }
+
+    @keyframes snowFall3 {
+      from { transform: translateY(0) translateX(0); }
+      to { transform: translateY(65%) translateX(-20px); }
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: 6px 16px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .top-gif-link {
+      display: inline-block;
+      margin-top: 2px;
+      line-height: 0;
+      text-decoration: none;
+    }
+
+    .top-gif {
+      display: block;
+      margin: 0 auto 2px;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.55));
+    }
+
+    .top-heading {
+      margin: 0 0 14px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      color: #d9d9d9;
+      text-shadow: 0 0 8px rgba(255,255,255,0.18);
+      line-height: 1.35;
+    }
+
+    .link-bar {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 18px;
+      padding: 0;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.78);
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+      box-shadow:
+        0 0 10px #cf00c5,
+        0 0 22px #ffa60073,
+        inset 0 0 8px #ffe60026;
+    }
+
+    .marquee-track {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      min-width: 100%;
+      padding-left: 100%;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      text-shadow: 0 0 8px rgb(255, 255, 255);
+      animation: runningText 10s linear infinite;
+    }
+
+    @keyframes runningText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .card {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+      border-radius: 18px;
+    }
+
+    .hero-wrap {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow:
+        0 0 18px #cf00c5,
+        0 0 38px rgba(0, 0, 0, 0.22);
+      background: #1a1500;
+    }
+
+    .banner-link {
+      display: block;
+      text-decoration: none;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+    }
+
+    .buttons {
+      width: 100%;
+      max-width: 340px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 10px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(180deg, #cf00c5 0%, #cf00c5 100%);
+      border: 2px solid #cf00c5;
+      border-radius: 10px;
+      box-shadow:
+        0 0 12px #cf00c5,
+        inset 0 1px 0 rgba(255,255,255,0.15);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .btn-wide {
+      grid-column: 1 / -1;
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 8px rgb(255, 255, 255);
+    }
+
+    @media (max-width: 360px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-wide {
+        grid-column: auto;
+      }
+
+      .top-heading {
+        font-size: 13px;
+      }
+
+      .marquee-text {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="snow"></div>
+
+  <main class="page">
+    <a class="top-gif-link" href="{{moneysite-link}}" target="_blank" rel="noopener noreferrer">
+      <amp-anim
+        class="top-gif"
+        src="{{logo}}"
+        width="150"
+        height="50"
+        layout="fixed"
+        alt="Logo {{brand_name}}">
+      </amp-anim>
+    </a>
+    <a class="link-bar" href="{{moneysite-link}}" target="_blank" rel="noopener noreferrer">
+      <div class="marquee-track">
+        <span class="marquee-text">{{title}}</span>
+      </div>
+    </a>
+
+    <section class="card">
+      <div class="hero-wrap">
+        <a class="banner-link" href="{{moneysite-link}}" target="_blank" rel="noopener noreferrer">
+          <amp-img
+            class="banner"
+            src="{{banner}}"
+            width="500"
+            height="500"
+            layout="responsive"
+            alt="{{brand_name}}">
+          </amp-img>
+        </a>
+      </div>
+
+      <div class="buttons">
+        <a class="btn" href="{{moneysite-link}}" target="_blank" rel="noopener noreferrer">DAFTAR</a>
+        <a class="btn" href="{{moneysite-link}}" target="_blank" rel="noopener noreferrer">LOGIN</a>
+        <a class="btn btn-wide" href="{{moneysite-link}}" target="_blank" rel="noopener noreferrer">LINK ALTERNATIF</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>@2026 | {{brand_name}} | SEO MAGANG</p>
+    </footer>
+  </main>
+</body>
+</html>
