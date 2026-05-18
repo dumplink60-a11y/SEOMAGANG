@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="title" content="{{title}}">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{brand_name}}, Slot {{brand_name}}, {{brand_name}} link">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="amphtml" href="{{amphtml}}">
+    <link rel="amphtml" href="{{amphtml}}">
+    <link rel="alternate" hreflang="id-id" href="{{amphtml}}"/>
+    <link rel="alternate" href="{{amphtml}}"/>
+    <link rel="alternate" hreflang="id" href="{{amphtml}}"/>
+    <link rel="alternate" hreflang="en" href="{{amphtml}}"/>
+    <meta property="og:site_name" content="{{brand_name}}">
+    <meta property="og:url" content="{{canonical}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:type" content="product">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="{{favicon}}">
+    <meta property="og:image:secure_url" content="{{favicon}}">
+    <meta property="og:image:width" content="4000">
+    <meta property="og:image:height" content="4000">
+    <meta property="og:price:amount" content="10,000">
+    <link rel="icon" type="image/x-icon" href="{{favicon}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{favicon}}">
+    <link rel="canonical" href="{{canonical}}">
+    <meta property="og:price:currency" content="IDR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #050505;
+            --border: #f7f7f7;
+            --success: #22c55e;
+        }
+
+        body { background: #940202; color: var(--dark); line-height: 1.6; }
+
+        /* NAV */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 5%; max-width: 1200px; margin: 0 auto;
+            background: rgb(0, 0, 0); border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 100;
+        }
+        nav .logo { font-weight: 800; font-size: 1.5rem; color: var(--dark); text-decoration: none; }
+        nav .logo span { color: var(--primary); }
+        nav ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        nav ul a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        nav ul a:hover { color: var(--dark); }
+        nav ul .cta-btn {
+            background: var(--primary); color: white !important; padding: 0.6rem 1.5rem; border-radius: 50px;
+            font-weight: 600; transition: all 0.3s;
+        }
+        nav ul .cta-btn:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,99,235,0.3); }
+
+        /* HERO */
+        .hero {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1200px; margin: 2rem auto; padding: 4rem 5%;
+            gap: 4rem;
+        }
+        .hero-content h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.2rem; color:#fff9f9}
+        .hero-content h1 span { background: linear-gradient(135deg, var(--primary), #e0e0e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-content p { font-size: 1.15rem; color: var(--gray); margin-bottom: 2rem; max-width: 500px; color:#fff9f9}
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--primary); color: white; border: none; padding: 1rem 2.2rem;
+            border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer;
+            transition: all 0.3s; text-decoration: none; display: inline-block;
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,99,235,0.35); }
+        .btn-ghost {
+            background: transparent; color: var(--dark); border: 2px solid var(--border); padding: 1rem 2.2rem;
+            border-radius: 50px; font-weight: 600; font-size: 1rem; cursor: pointer;
+            transition: all 0.3s; text-decoration: none; display: inline-block;
+        }
+        .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+        .hero-image { flex-shrink: 0; }
+        .hero-image img { max-width: 500px; width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+
+        /* FEATURES */
+        .features {
+            padding: 5rem 5%; background: var(--light);
+        }
+        .features h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color:#fff9f9}
+        .feature-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem; max-width: 1200px; margin: 0 auto;
+        }
+        .feature-card {
+            background: rgb(255, 255, 255); border-radius: 16px; padding: 2rem;
+            text-align: center; border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+        .feature-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .feature-card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .feature-card p { color: var(--gray); font-size: 0.9rem; }
+
+        /* PRODUCTS */
+        .products {
+            padding: 5rem 5%; max-width: 1200px; margin: 0 auto;
+        }
+        .products h2 { text-align: center; font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .products > p { text-align: center; color: var(--gray); margin-bottom: 3rem;color:#000000}
+        .product-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+         .product-card {
+            border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+            transition: all 0.3s; background: white;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .product-card img { width: 100%; height: 255px; object-fit: cover; background: var(--light); text-align: center;}
+        .product-card .info { padding: 1.5rem; }
+        .product-card .info h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .product-card .info .price { font-weight: 700; font-size: 1.3rem; color: var(--primary); margin-bottom: 0.3rem; }
+        .product-card .info .old-price { text-decoration: line-through; color: #94a3b8; font-size: 0.9rem; margin-left: 0.5rem; font-weight: 400; }
+        .product-card .info .rating { color: #f59e0b; font-size: 0.9rem; margin-bottom: 1rem; }
+        .product-card .info p { color: var(--gray); font-size: 0.85rem; margin-bottom: 1.2rem; }
+        .add-to-cart {
+            width: 100%; background: var(--primary); color: white; border: none;
+            padding: 0.9rem; border-radius: 10px; font-weight: 600; cursor: pointer;
+            transition: all 0.3s; font-size: 0.9rem;
+        }
+        .add-to-cart:hover { background: var(--primary-dark); }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 5rem 5%; background: var(--light);
+        }
+        .testimonials h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color:#fff9f9 }
+        .testimonial-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem; max-width: 1200px; margin: 0 auto;
+        }
+        .testimonial-card {
+            background: white; border-radius: 16px; padding: 2rem; border: 1px solid var(--border);
+        }
+        .testimonial-card .stars { color: #f59e0b; font-size: 1.2rem; margin-bottom: 1rem; }
+        .testimonial-card p { color: var(--gray); font-style: italic; margin-bottom: 1rem; font-size: 0.95rem; }
+        .testimonial-card .author { font-weight: 600; color: var(--dark); }
+
+        /* NEWSLETTER */
+        .newsletter {
+            padding: 5rem 5%; text-align: center; background: var(--dark); color: white;
+        }
+        .newsletter h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+        .newsletter p { color: #94a3b8; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .newsletter form { display: flex; max-width: 500px; margin: 0 auto; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+        .newsletter input {
+            flex: 1; min-width: 250px; padding: 1rem 1.5rem; border-radius: 50px; border: none;
+            font-size: 1rem; outline: none;
+        }
+        .newsletter button {
+            background: var(--primary); color: white; border: none; padding: 1rem 2rem;
+            border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer;
+            transition: all 0.3s;
+        }
+        .newsletter button:hover { background: var(--primary-dark); }
+
+        /* FOOTER */
+        footer {
+            padding: 3rem 5%; background: var(--dark); border-top: 1px solid #1e293b;
+        }
+        footer .footer-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem; max-width: 1200px; margin: 0 auto; margin-bottom: 2rem;
+        }
+        footer h4 { color: white; margin-bottom: 1rem; font-size: 1rem; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 0.5rem; }
+        footer ul a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        footer ul a:hover { color: white; }
+        footer .bottom { text-align: center; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid #1e293b; padding-top: 2rem; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding: 2rem 5%; }
+            .hero-content h1 { font-size: 2.2rem; color: #ffffff; }
+            .hero-buttons { justify-content: center; }
+            .hero-image img { max-width: 350px; }
+            nav ul { gap: 1rem; }
+            nav ul li:not(.cta) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="logo">
+    <img src="{{logo}}" alt="{{brand_name}}" style="height: 40px; width: auto;">
+</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="cta-btn">Shop Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>{{title}}</h1>
+            <p>{{content}}</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">DAFTAR →</a>
+                <a href="#" class="btn-ghost">LOGIN</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{banner}}" alt="{{brand_name}} slot">
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>KENAPA HARUS PILIH {{brand_name}} ?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">👩🏽‍💻</div>
+                <h3>CS 24 Jam</h3>
+                <p>Siap Melayani Berbagai Keluhan Member {{brand_name}}</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔒</div>
+                <h3>Resmi</h3>
+                <p>Situs Resmi Dari Provider Terbaik di Indonesia</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🕵🏻‍♀️</div>
+                <h3>Transparansi</h3>
+                <p>Setiap transaksi di situs gacor {{brand_name}} mengutamakan transparan dan adil untuk member</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎰</div>
+                <h3>RTP Tinggi</h3>
+                <p>RTP Situs {{brand_name}} memiliki rate tertinggi dari situs lainnya</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+      <h2>Game Populer Hari Ini</h2>
+      <p>Pilihan game paling gacor dengan Winrate tertinggi hari ini</p>
+      <div class="product-grid">
+          <!-- Game 1: Slot -->
+          <div class="product-card">
+              <img src="https://i.pinimg.com/564x/dd/cd/dc/ddcddc00cd849e04ed2d1b25c8b4e608.jpg" alt="Slot Gacor Online">
+              <div class="info">
+                  <h3>Slot Online Gacor</h3>
+                  <div><span class="price">RTP 93.5%</span><span class="old-price">Volatilitas Tinggi</span></div>
+                  <div class="rating">⭐⭐⭐⭐⭐ <span style="color:var(--gray);font-weight:400;">(4.9)</span></div>
+                  <p>Nikmati ratusan pilihan game slot maxwin dengan server anti-lag dan jackpot terbesar.</p>
+                  <button class="add-to-cart" onclick="window.open('#', '_blank')">Main Sekarang</button>
+              </div>
+          </div>
+          <!-- Game 2: Togel -->
+          <div class="product-card">
+              <img src="https://coffeeincorporated.com/img/logo-sgp.png" alt="Togel Online Terpercaya">
+              <div class="info">
+                  <h3>Togel Online</h3>
+                  <div><span class="price">Diskon 66%</span><span class="old-price">Hadiah x9000</span></div>
+                  <div class="rating">⭐⭐⭐⭐☆ <span style="color:var(--gray);font-weight:400;">(4.7)</span></div>
+                  <p>Pasaran togel terlengkap (Hongkong, Singapore, Sydney) dengan aman, cepat, dan terpercaya.</p>
+                  <button class="add-to-cart" onclick="window.open('#', '_blank')">Pasang Angka</button>
+              </div>
+          </div>
+          <!-- Game 3: Casino -->
+          <div class="product-card">
+              <img src="https://assets.simpleviewinc.com/sv-greaterpalmsprings/image/upload/c_fill,h_800,q_75,w_1200/v1/cms_resources/clients/palmsprings/GPS24_AguaCalienteCasino_024_1__22a6f268-ccf2-4694-a312-d98736b31cf3.jpg" alt="Live Casino">
+              <div class="info">
+                  <h3>Live Casino</h3>
+                  <div><span class="price">Bonus Rollingan</span><span class="old-price">Dealer Live</span></div>
+                  <div class="rating">⭐⭐⭐⭐⭐ <span style="color:var(--gray);font-weight:400;">(4.8)</span></div>
+                  <p>Rasakan sensasi bermain Baccarat, Roulette, dan Sic Bo real-time bersama dealer profesional.</p>
+                  <button class="add-to-cart" onclick="window.open('#', '_blank')">Gabung Meja</button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+   <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>Bukti Kemenangan Member</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Awalnya iseng main slot di sini, gak nyangka modal receh bisa dapat scatter beruntun sampai maxwin! Proses WD nya juga cepet banget gak pakai ribet."</p>
+                <div class="author">— Rian K. (Jakarta)</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Pasaran togelnya lengkap banget. Kemarin tembus angka 4D di pasaran HK langsung dibayar lunas tanpa potongan. CS nya ramah dan fast respon 24 jam."</p>
+                <div class="author">— Andi S. (Surabaya)</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Paling suka main Live Casino di sini, streamingnya lancar anti-lag dan dealer-nya real-time. Bonus rollingan tiap minggunya juga fair dan masuk tepat waktu."</p>
+                <div class="author">— Budi T. (Medan)</div>
+            </div>
+        </div>
+    </section>
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <h2>BERGABUNG BERSAMA {{brand_name}}</h2>
+        <p>Dapatkan Promo Eksklusif Slot Gacor Hari Ini!</p>
+        <form onsubmit="event.preventDefault(); alert('Subscribed! Check your inbox.');">
+            <input type="email" placeholder="cari di google {{brand_name}}v" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>{{brand_name}}</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">hello@{{brand_name}}.com</a></li>
+                    <li><a href="#">+1 (555) 123-4567</a></li>
+                    <li><a href="#">@{{brand_name}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            &copy; 2025 {{brand_name}}. SEOMAGANG.
+        </div>
+    </footer>
+
+</body>
+</html>
