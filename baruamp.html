@@ -1,0 +1,405 @@
+<!doctype html>
+    <html ⚡ lang="id">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>{{title}}</title>
+    <meta property="og: title" content="{{title}}" />
+    <meta name="description" content="{{description}}">
+    <meta property="og:description" content="{{description}}" />
+    <link rel="canonical" href="{{canonical}}">
+    <link rel="preload" href="{{banner}}" as="image">
+    <meta property="og:image" content="{{banner}}" />
+    <meta property="og:site_name" content="{{brand_name}}" />
+    <meta property="og:image:alt" content="{{brand_name}}" />
+    <link rel="icon" type="image/x-icon" href="{{favicon}}">
+    <meta name="robots" content="index,follow" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <meta name="theme-color" content="var(--gold)">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "{{brand_name}}",
+          "alternateName": "{{title}}",
+          "url": "{{canonical}}",
+          "logo": "{{favicon}}",
+          "description": "{{description}}",
+          "sameAs": [
+            "https://t.me/{{brand_name}}",
+            "https://twitter.com/{{brand_name}}"
+          ]
+        }
+        </script>
+    <style amp-boilerplate>
+    body{
+          -webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+          -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+          -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+            animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes 
+          -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes 
+          -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes 
+          -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes 
+          -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes 
+          -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{
+          -webkit-animation:none;
+          -moz-animation:none;
+          -ms-animation:none;
+          animation:none
+          }
+          </style>
+          </noscript>
+
+    <style amp-custom>
+    :root{
+      --red:{{color_theme}} ;
+      --darkred:#8c00ff ;
+      --gold:#ffbb00 ;
+      --pink:#f6fa00   ;
+      --white: #ffffff;
+      --black:#0d0d0d;
+      --line1: #ff1e00;
+      --line2: #ff4800;
+      --line3: #ff7300;
+      --line4: #ff8800 ;
+      --line5: #ffbb00;
+    }
+
+    @keyframes kedut{
+      0%,100%{transform:scale(1);}
+      50%{transform:scale(1.05);}
+    }
+
+    @keyframes breathing{
+      0%,100%{transform:translateY(0) scale(1);}
+      50%{transform:translateY(-6px) scale(1.03);}
+    }
+
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:linear-gradient(135deg,var(--darkred),var(--red));
+      color:#fff;
+      text-align:center;
+      overflow-y:auto;
+    }
+   
+    .falling-sparks {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 5; pointer-events: none; overflow: hidden;
+      }
+      .spark {
+        position: absolute; top: -100px; width: 2px; height: 40px;
+        border-radius: 50%; animation: rainDrop linear infinite;
+      }
+      .spark.cyan { background: var(--white); box-shadow: 0 0 8px var(--white); }
+      .spark.green { background: var(--red); box-shadow: 0 0 8px var(--red); }
+      @keyframes rainDrop {
+        0% { transform: translateY(-100px); opacity: 0; }
+        10% { opacity: 1; height: 50px; }
+        90% { opacity: 1; height: 30px; }
+        100% { transform: translateY(100vh); opacity: 0; }
+      }
+      .spark:nth-child(1) { left: 5%; animation-duration: 2.2s; animation-delay: 0.1s; }
+      .spark:nth-child(2) { left: 15%; animation-duration: 2.8s; animation-delay: 1.2s; }
+      .spark:nth-child(3) { left: 25%; animation-duration: 2.0s; animation-delay: 0.5s; }
+      .spark:nth-child(4) { left: 35%; animation-duration: 3.1s; animation-delay: 1.8s; }
+      .spark:nth-child(5) { left: 45%; animation-duration: 2.5s; animation-delay: 0.8s; }
+      .spark:nth-child(6) { left: 55%; animation-duration: 3.5s; animation-delay: 0.5s; }
+      .spark:nth-child(7) { left: 65%; animation-duration: 2.4s; animation-delay: 2.3s; }
+      .spark:nth-child(8) { left: 75%; animation-duration: 2.3s; animation-delay: 1.3s; }
+      .spark:nth-child(9) { left: 85%; animation-duration: 2.6s; animation-delay: 2.3s; }
+      .spark:nth-child(10) { left: 95%; animation-duration: 2.2s; animation-delay: 1.3s; }
+    .popup-wrapper{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px 0;
+    }
+
+    .popup-bg{
+      position:absolute;
+      inset:0;
+      background:url('{{banner}}') center/cover no-repeat;
+      filter:MANDIRIghtness(0.4) blur(3px);
+    }
+
+    .popup-card{
+      position:relative;
+      background:rgba(0, 0, 0, 0);
+      backdrop-filter:blur(0px);
+      border-radius:20px;
+      padding:20px;
+      max-width:380px;
+      width:90%;
+      box-shadow:0 0 30px rgba(0, 0, 0, 0.952);
+      animation:breathing 4s ease-in-out infinite;
+      margin:40px 0;
+    }
+    .fab-wrapper {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+    }
+
+    .fab-chat {
+        width: 55px;
+        height: 55px;
+        background: var(--red);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid var(--gold);
+        position: relative;
+        z-index: 2;
+
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.12); }
+        100% { transform: scale(1); }
+    }
+    .chevron {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-right: 5px solid var(--red);
+        border-bottom: 5px solid var(--red);
+        transform: rotate(-45deg);
+        opacity: 0;
+        animation: slide 1s infinite;
+        filter: drop-shadow(0 0 5px var(--gold));
+    }
+
+    .c1 { right: 80px; bottom: 15px; animation-delay: 0.3s; }
+    .c2 { right: 95px; bottom: 15px; animation-delay: 0.2s; }
+    .c3 { right: 110px; bottom: 15px; animation-delay: 0.1s; }
+
+
+    @keyframes slide {
+        0% {
+            transform: translateX(-10px) rotate(-45deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(10px) rotate(-45deg);
+            opacity: 0;
+        }
+    }
+    .dhevron {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-right: 5px solid var(--red);
+        border-bottom: 5px solid var(--red);
+        transform: rotate(45deg);
+        opacity: 0;
+        animation: slideDown 1s infinite;
+        filter: drop-shadow(0 0 5px var(--gold));
+    }
+    .d6 { right: 18px; bottom: 80px; animation-delay: 0.3s; }
+    .d7 { right: 18px; bottom: 95px; animation-delay: 0.2s; }
+    .d8 { right: 18px; bottom: 110px; animation-delay: 0.1s; }
+
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-10px) rotate(45deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(10px) rotate(45deg);
+            opacity: 0;
+        }
+    }
+    .brand-area{
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    .logo-glow{
+      border-radius:50%;
+      box-shadow:0 0 15px rgba(0, 0, 0, 0.952);
+      margin-bottom:7px;
+      animation:kedut 2s infinite;
+    }
+
+    .hero{
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    .btn-group{
+      display:flex;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .btn{
+      flex:1;
+      text-align:center;
+      padding:12px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      color:#000000;
+      animation:kedut 1.2s infinite;
+    }
+
+    .btn-daftar{
+      background:linear-gradient(45deg,var(--red),var(--pink));
+      box-shadow:0 0 15px rgba(0, 0, 0, 0.952);
+    }
+
+    .btn-login{
+      background:linear-gradient(45deg,var(--pink),var(--red));
+    }
+
+    .cta{
+      display:block;
+      margin-top:15px;
+      background:linear-gradient(45deg,var(--red),var(--pink));
+      padding:12px;
+      border-radius:30px;
+      color:#000;
+      font-weight:bold;
+      text-decoration:none;
+      text-align:center;
+      animation:kedut 1.5s infinite;
+      box-shadow:0 0 15px rgba(0, 0, 0, 0.952);
+    }
+
+  .title {
+    font-size: 15px; 
+    font-weight: bold;
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--gold); 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); 
+  }
+
+  .desc {
+    font-size: 13.5px;
+    margin-top: 12px;
+    color: #f5f5f5; 
+    line-height: 1.5; 
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .footer {
+    font-size: 11px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7); 
+  }
+
+  .footer strong a {
+    color: var(--gold); 
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 1)
+  }
+    </style>
+    </head>
+    <body>
+    <div class="popup-wrapper">
+    <div class="falling-sparks">
+        <div class="spark cyan"></div>
+        <div class="spark green"></div>
+        <div class="spark cyan"></div>
+        <div class="spark green"></div>
+        <div class="spark cyan"></div>
+        <div class="spark green"></div>
+        <div class="spark cyan"></div>
+        <div class="spark green"></div>
+        <div class="spark cyan"></div>
+        <div class="spark green"></div>    
+      </div>
+
+      <div class="popup-bg"></div>
+
+      <div class="popup-card">
+
+        <div class="brand-area">
+          <amp-img 
+            class="logo-glow"
+            src="{{favicon}}"
+            width="75"
+            height="75"
+            layout="fixed"
+            alt="{{brand_name}}">
+          </amp-img>
+
+          <amp-img
+          src="{{logo}}"
+          width="270"
+            height="90"
+            layout="intrinsic"
+            alt="{{brand_name}}">
+          </amp-img>
+        </div>
+
+        <div class="hero">
+          <amp-img 
+            src="{{banner}}"
+            width="800"
+            height="800"
+            layout="responsive"
+            alt="{{brand_name}}">
+          </amp-img>
+        </div>
+
+        <div class="btn-group">
+          <a href="{{moneysite-link}}" class="btn btn-daftar">DAFTAR</a>
+          <a href="{{moneysite-link}}" class="btn btn-login">LOGIN</a>
+        </div>
+
+          <a href="{{moneysite-link}}" class="cta">BOCORAN GAME GACOR</a>
+
+        <div class="title">
+          {{title}}
+        </div>
+      
+        <div class="desc">
+          {{description}}
+        </div>
+
+        <div class="footer">
+          © 2026 SEOMAGANG<br>
+          <strong><a># ANOMALY PERUSAK GOOGLE</a></strong>
+        </div>
+      </div>
+    <div class="fab-wrapper">
+        <a href="{{moneysite-link}}" class="fab-chat">
+            <img src="https://didalamnalarcoy.pages.dev/2396fe9cfdee2420d8cc1bc3d77a6c06.gif" width="50" height="50" alt="Contact">
+        </a>
+        <span class="chevron c1"></span>
+        <span class="chevron c2"></span>
+        <span class="chevron c3"></span>
+        <span class="dhevron d6"></span>
+        <span class="dhevron d7"></span>
+        <span class="dhevron d8"></span>
+    </div>
+   
+    </div>
+    </body>
+    </html>
+    
