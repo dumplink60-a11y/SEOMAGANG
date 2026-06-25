@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html data-browser="unknown" lang="id-ID">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>{{title}}</title>
+    <meta content="{{title}}" name="title" />
+    <meta content="{{description}}" name="description" />
+    <meta content="{{brand_name}}, slot gacor hari ini, slot maxwin, slot88, slot gacor maxwin, slot deposit 10k" name="keywords" />
+    <meta content="id_ID" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="{{canonical}}" property="og:url" />
+    <meta content="{{brand_name}}" property="og:site_name" />
+    <meta content="{{title}}" property="og:title" />
+    <meta content="{{description}}" property="og:description" />
+    <meta content="DarkGold" name="theme-color" />
+    <meta content="id-ID" name="language" />
+    <meta content="website" name="categories" />
+    <meta content="ID" name="geo.region" />
+    <meta content="DKI Jakarta" name="geo.placename" />
+
+    <link href="{{canonical}}" rel="canonical" />
+    <link href="{{favicon}}" rel="icon" type="image/x-icon" />
+    <link href="https://diy-rangka-rangking.design/Content/desktop-css.css" rel="stylesheet" />
+    <link rel="preload" as="image" href="{{banner}}" fetchpriority="high">
+    <link href="https://diy-rangka-rangking.design/Content/Home/desktop-css.css" rel="stylesheet" />
+    <link href="https://diy-rangka-rangking.design/Content/slick.css" rel="stylesheet" />
+    <link href="https://diy-rangka-rangking.design/Content/Theme/desktop.css" rel="stylesheet" />
+    <link rel="alternate" hreflang="id-id" href="{{amphtml}}">
+    <link rel="amphtml" href="{{amphtml}}" />
+    <link rel="alternate" href="{{amphtml}}">
+    <link rel="alternate" hreflang="id" href="{{amphtml}}">
+    <link rel="alternate" hreflang="en" href="{{amphtml}}">
+    <link rel="alternate" hreflang="x-default" href="{{amphtml}}">
+    <link href="https://diy-rangka-rangking.design/Content/reserve.css" rel="stylesheet" />
+
+    <style>
+        /* ============================================================ */
+        /*  FONTS                                                        */
+        /* ============================================================ */
+        @font-face {
+            font-family: 'digital_sans_ef_medium';
+            font-display: swap;
+            src: url('https://dsuown9evwz4y.cloudfront.net/Fonts/digital_sans_ef_medium.woff2') format('woff2'),
+                 url('https://dsuown9evwz4y.cloudfront.net/Fonts/digital_sans_ef_medium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'gilroybold';
+            font-display: swap;
+            src: url('https://dsuown9evwz4y.cloudfront.net/Fonts/Gilroy-Bold.woff2') format('woff2'),
+                 url('https://dsuown9evwz4y.cloudfront.net/Fonts/Gilroy-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Open24DisplaySt';
+            font-display: swap;
+            src: url('https://dsuown9evwz4y.cloudfront.net/Fonts/Open24DisplaySt.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Glyphicons Halflings';
+            font-display: swap;
+            src: url('https://dsuown9evwz4y.cloudfront.net/Fonts/glyphicons-halflings-regular.woff') format('woff');
+        }
+
+        body {
+            font-family: 'digital_sans_ef_medium', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-color: {{color_theme}} !important;
+            color: #ffffff !important;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: inherit;
+        }
+        .home-progressive-jackpot .jackpot-play-section .jackpot-play-text {
+            font-family: 'gilroybold';
+        }
+        .home-progressive-jackpot .jackpot-container {
+            font-family: 'Open24DisplaySt';
+        }
+        .glyphicon {
+            font-family: 'Glyphicons Halflings';
+        }
+
+        /* ============================================================ */
+        /*  GLOBAL RESET                                                 */
+        /* ============================================================ */
+        *, *::before, *::after { box-sizing: border-box; }
+        img { max-width: 100%; height: auto; }
+
+
+        /* ============================================================ */
+        /*  POPUP                                                        */
+        /* ============================================================ */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 15px;
+        }
+        .popup-container {
+            position: relative;
+            width: min(94vw, 880px);
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 26px;
+            background: linear-gradient(145deg, #070707 0%, #15100a 50%, #050505 100%);
+            border: 1px solid rgba(255, 208, 91, 0.42);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.72), 0 0 34px rgba(218, 165, 32, 0.24);
+        }
+        .popup-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: 2px solid {{color_theme}};
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .popup-close-btn:hover {
+            background: {{color_theme}};
+            color: #000;
+        }
+        .gameonline {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 0;
+        }
+        .popup-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #111;
+            min-height: 250px;
+        }
+        .popup-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(20px, 4vw, 48px) clamp(20px, 4vw, 42px);
+            color: #000000;
+            background: linear-gradient(180deg, rgba(24, 18, 8, 0.92), rgba(3, 3, 3, 0.95));
+        }
+        .popup-kicker {
+            width: fit-content;
+            margin-bottom: 14px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            color: #1c1300;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #fff4b2, {{color_theme}} 45%, {{color_theme}});
+            font-size: clamp(11px, 1.5vw, 14px);
+        }
+        .popup-title {
+            margin: 0 0 14px;
+            color: #ffe29a;
+            font-size: clamp(20px, 3vw, 32px);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .popup-subtitle {
+            margin: 0 0 28px;
+            color: rgba(255, 244, 207, 0.83);
+            font-size: clamp(13px, 1.6vw, 15px);
+            line-height: 1.6;
+        }
+        .popup-footer { display: flex; flex-direction: column; gap: 6px; }
+        .popup-footer-copy, .popup-footer-meta { font-size: 11px; color: rgba(255, 244, 207, 0.5); }
+        .gold-particle {
+            position: absolute;
+            z-index: 0;
+            border-radius: 999px;
+            background: radial-gradient(circle, #fff6ba 0%, #d4a72c 58%, rgba(212, 167, 44, 0) 72%);
+            box-shadow: 0 0 18px rgba(255, 212, 98, 0.85);
+            animation: popupGoldFloat 7s ease-in-out infinite;
+        }
+        @keyframes popupGoldFloat {
+            0%, 100% { transform: translateY(0) scale(1); opacity: .55; }
+            50% { transform: translateY(-18px) scale(1.18); opacity: 1; }
+        }
+        .luxury-border {
+            position: absolute;
+            inset: 12px;
+            z-index: 1;
+            pointer-events: none;
+            border: 1px solid rgba(255, 214, 111, 0.32);
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .popup-container { width: 95vw; border-radius: 20px; }
+            .gameonline { grid-template-columns: 1fr; }
+            .popup-image { min-height: 200px; max-height: 280px; }
+            .popup-body { padding: 20px; }
+        }
+
+        /* ============================================================ */
+        /*  ANNOUNCEMENT                                                 */
+        /* ============================================================ */
+        .announcement-container {
+            background: {{color_theme}};
+            border-left: 5px solid #080808;
+            padding: clamp(12px, 2vw, 20px);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .announcement-list { list-style: none; padding: 0; margin: 0; }
+        .announcement-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid {{color_theme}};
+            font-size: clamp(13px, 1.8vw, 15px);
+            color: #000000;
+            word-break: break-word;
+        }
+        .announcement-list li:last-child { border-bottom: none; }
+
+        /* ============================================================ */
+        /*  BANNER                                                       */
+        /* ============================================================ */
+        .banner-carousel img { width: 100%; height: auto; max-height: 50vw; object-fit: cover; }
+
+        /* ============================================================ */
+        /*  TOPBAR (MOBILE)                                              */
+        /* ============================================================ */
+        @media (max-width: 992px) {
+            .topbar-left-section { flex-wrap: wrap; gap: 6px; }
+            .topbar-item { margin: 2px; }
+            .login-panel { display: flex; gap: 8px; flex-wrap: wrap; }
+        }
+        @media (max-width: 576px) {
+            .topbar-left-container, .topbar-right-container { width: 100%; }
+            .topbar-right-container { margin-top: 8px; }
+            .topbar-left-section { justify-content: center; }
+            .login-panel { justify-content: center; }
+            .telegram-btn { font-size: 11px !important; padding: 4px 8px !important; }
+            .language-selector { max-height: 250px; overflow-y: auto; right: 0; left: auto; }
+            .modal-dialog { width: 95% !important; margin: 10px auto; }
+        }
+
+        /* ============================================================ */
+        /*  SITE HEADER / MENU (MOBILE)                                  */
+        /* ============================================================ */
+        @media (max-width: 768px) {
+            .site-header .logo img { max-height: 50px; }
+            .top-menu { flex-wrap: wrap; justify-content: center; gap: 4px; }
+            .top-menu > li > a { font-size: 12px; padding: 6px 8px; }
+            .top-menu > li > a img { width: 20px !important; height: 20px !important; }
+        }
+
+        /* ============================================================ */
+        /*  GAME LIST WRAPPING                                           */
+        /* ============================================================ */
+        .game-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .games-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .game-item { flex: 0 1 auto; }
+        .game-item img { max-width: 100%; height: auto; }
+
+        /* ============================================================ */
+        /*  POPULAR GAMES SECTION                                        */
+        /* ============================================================ */
+        @media (max-width: 768px) {
+            .popular-games { flex-direction: column !important; }
+            .popular-games [data-section="left"],
+            .popular-games [data-section="right"] { width: 100% !important; }
+            .nav-tabs { flex-wrap: wrap; gap: 4px; }
+            .nav-tabs > li > a { padding: 6px 8px; font-size: 11px; }
+            .nav-tabs > li > a img { width: 30px !important; height: 30px !important; }
+        }
+
+        /* ============================================================ */
+        /*  JACKPOT                                                      */
+        /* ============================================================ */
+        .home-progressive-jackpot .jackpot-currency {
+            font-size: clamp(18px, 4vw, 28px) !important;
+        }
+
+        /* ============================================================ */
+        /*  DOWNLOAD APK                                                 */
+        /* ============================================================ */
+        @media (max-width: 768px) {
+            .download-apk { flex-direction: column !important; text-align: center; }
+            .download-apk img { max-width: 250px; height: auto; }
+        }
+
+        /* ============================================================ */
+        /*  FOOTER PROVIDER GRID                                         */
+        /* ============================================================ */
+        .provider-container ul.hover-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-start;
+        }
+        .provider-container ul.hover-list li { flex: 0 0 auto; }
+        .provider-container ul.hover-list img { max-width: 80px; height: auto; }
+
+        @media (max-width: 576px) {
+            .provider-container ul.hover-list { justify-content: center; gap: 6px; }
+            .provider-container ul.hover-list img { max-width: 60px; }
+        }
+
+        /* ============================================================ */
+        /*  FOOTER LAYOUT                                                */
+        /* ============================================================ */
+        @media (max-width: 768px) {
+            .site-footer .row { flex-direction: column; }
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
+            .site-info-container { margin-bottom: 20px; }
+        }
+
+        /* ============================================================ */
+        /*  FLOATING BUTTON                                              */
+        /* ============================================================ */
+        @media (max-width: 576px) {
+            .floating-action-button { bottom: 15px; right: 10px; }
+        }
+
+        /* ============================================================ */
+        /*  ANTI HORIZONTAL OVERFLOW                                     */
+        /* ============================================================ */
+        .container, .row, .col-md-12, .col-md-8, .col-md-4,
+        .col-sm-3, .col-sm-9, .col-md-6, .col-md-5, .col-md-3 {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body data-online-id="" data-logged-in="false" style="--expand-icon-src: url(/dsuown9evwz4y.cloudfront.net/Images/icons/expande252.gif);
+      --collapse-icon-src: url(/dsuown9evwz4y.cloudfront.net/Images/icons/collapsee252.gif);
+      --play-icon-src: url(/dsuown9evwz4y.cloudfront.net/Images/icons/playe252.png);
+      --jquery-ui-444444-src: url(/dsuown9evwz4y.cloudfront.net/Images/jquery-ui/ui-icons_444444_256x240e252.png);
+      --jquery-ui-555555-src: url(/dsuown9evwz4y.cloudfront.net/Images/jquery-ui/ui-icons_555555_256x240e252.png);
+      --jquery-ui-ffffff-src: url(/dsuown9evwz4y.cloudfront.net/Images/jquery-ui/ui-icons_ffffff_256x240e252.png);
+      --jquery-ui-777620-src: url(/dsuown9evwz4y.cloudfront.net/Images/jquery-ui/ui-icons_777620_256x240e252.png);
+      --jquery-ui-cc0000-src: url(/dsuown9evwz4y.cloudfront.net/Images/jquery-ui/ui-icons_cc0000_256x240e252.png);
+      --jquery-ui-777777-src: url(/dsuown9evwz4y.cloudfront.net/Images/jquery-ui/ui-icons_777777_256x240e252.png);">
+
+<!-- ============ POPUP ============ -->
+<div class="popup-overlay popup-full-mobile" id="popupOverlay">
+    <div class="popup-container">
+        <button type="button" class="popup-close-btn" onclick="closePopup()">&times;</button>
+        <div class="gold-particle" style="width: 10px; height: 10px; top: 15%; left: 12%; animation-delay: 0s;"></div>
+        <div class="gold-particle" style="width: 8px; height: 8px; top: 35%; left: 88%; animation-delay: 1.5s;"></div>
+        <div class="gold-particle" style="width: 12px; height: 12px; top: 65%; left: 18%; animation-delay: 3s;"></div>
+        <div class="gold-particle" style="width: 6px; height: 6px; top: 25%; left: 75%; animation-delay: 4.5s;"></div>
+        <div class="gold-particle" style="width: 9px; height: 9px; top: 80%; left: 60%; animation-delay: 6s;"></div>
+        <div class="luxury-border"></div>
+        <div class="gameonline">
+            <img src="{{banner}}" alt="{{title}}" class="popup-image" />
+            <div class="popup-body">
+                <span class="popup-kicker">Official Access</span>
+                <h2 class="popup-title">Masuk atau daftar dalam satu langkah cepat</h2>
+                <p class="popup-subtitle">Akses link utama {{brand_name}} dengan tampilan lebih rapi, aman, dan nyaman dipakai di mobile maupun desktop.</p>
+                <div class="popup-footer">
+                    <span class="popup-footer-copy">{{title}}</span>
+                    <span class="popup-footer-meta">&copy; 2026 {{brand_name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar-container">
+    <div class="container">
+        <div class="row">
+            <div class="topbar-left-container">
+                <div class="topbar-left-section">
+                    <div class="topbar-item">
+                        <span class="js_live_chat_link live-chat">
+                            <i data-icon="live-chat" style="background-image: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/live-chat.svg);"></i>
+                        </span>
+                    </div>
+                    <div class="topbar-item">
+                        <a href="{{amphtml}}" class="download-apk-btn">
+                            <i data-icon="android" style="background-image: url(https://dsuown9evwz4y.cloudfront.net/Images/icons/android-logo.svg);"></i>
+                        </a>
+                    </div>
+                    <div class="topbar-item">
+                        <a href="{{amphtml}}" class="telegram-btn" rel="nofollow" target="_blank">
+                            <i data-icon="telegram" style="background-image: url(https://dsuown9evwz4y.cloudfront.net/Images/icons/telegram-btn-icon.svg);"></i> Main di Telegram
+                        </a>
+                    </div>
+                    <div class="topbar-item">
+                        <a href="{{amphtml}}" rel="nofollow">
+                            <i data-icon="contact-us" style="background-image: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/mobile.svg);"></i>
+                        </a>
+                    </div>
+                    <div class="topbar-item language-selector-container" style="--image-src: url(https://s12.gifyu.com/images/bhN9a.png);">
+                        <div id="language_selector_trigger" data-toggle="dropdown" class="language-selector-trigger" data-language="id">
+                            <i data-language="id"></i>
+                        </div>
+                        <ul class="dropdown-menu language-selector">
+                            <li class="language_selector" data-language="en"><i data-language="en"></i><div class="language-name"><div>ENGLISH</div><div>ENGLISH</div></div></li>
+                            <li class="language_selector" data-language="id"><i data-language="id"></i><div class="language-name"><div>BHS INDONESIA</div><div>INDONESIAN</div></div></li>
+                            <li class="language_selector" data-language="kr"><i data-language="kr"></i><div class="language-name"><div>한국어</div><div>KOREAN</div></div></li>
+                            <li class="language_selector" data-language="cn"><i data-language="cn"></i><div class="language-name"><div>中文</div><div>CHINESE</div></div></li>
+                            <li class="language_selector" data-language="jp"><i data-language="jp"></i><div class="language-name"><div>日本語</div><div>JAPANESE</div></div></li>
+                            <li class="language_selector" data-language="th"><i data-language="th"></i><div class="language-name"><div>ไทย</div><div>THAI</div></div></li>
+                            <li class="language_selector" data-language="my"><i data-language="my"></i><div class="language-name"><div>မြန်မာစာ</div><div>BURMESE</div></div></li>
+                            <li class="language_selector" data-language="kh"><i data-language="kh"></i><div class="language-name"><div>ខេមរភាសា</div><div>KHMER</div></div></li>
+                            <li class="language_selector" data-language="hi"><i data-language="hi"></i><div class="language-name"><div>हिन्दी</div><div>HINDI</div></div></li>
+                            <li class="language_selector" data-language="ta"><i data-language="ta"></i><div class="language-name"><div>தமிழ்</div><div>TAMIL</div></div></li>
+                            <li class="language_selector" data-language="te"><i data-language="te"></i><div class="language-name"><div>తెలుగు</div><div>TELUGU</div></div></li>
+                            <li class="language_selector" data-language="vi"><i data-language="vi"></i><div class="language-name"><div>Tiếng Việt</div><div>VIETNAMESE</div></div></li>
+                            <li class="language_selector" data-language="bn"><i data-language="bn"></i><div class="language-name"><div>বাংলাদেশী</div><div>BENGALI</div></div></li>
+                            <li class="language_selector" data-language="pt"><i data-language="pt"></i><div class="language-name"><div>Portugu&#234;s</div><div>PORTUGESE</div></div></li>
+                        </ul>
+                    </div>
+                    <div class="topbar-item">
+                        <a href="#" class="search_popup_button">
+                            <i data-icon="search" style="background-image: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/search.svg);"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="topbar-right-container">
+                <div class="login-panel">
+                    <div class="login-panel-item"><a href="{{amphtml}}" class="login-button">Masuk</a></div>
+                    <div class="login-panel-item"><a href="{{amphtml}}" class="register-button">Daftar</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER + MENU ============ -->
+<div class="site-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <a href="{{amphtml}}" class="logo" style="background-image: url(/dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/logo-backgrounde252.png);">
+                    <img alt="Logo" loading="lazy" src="{{logo}}" />
+                </a>
+            </div>
+            <div class="col-sm-9 col-md-9">
+                <div class="menu-slide" id="menu_slides">
+                    <i class="glyphicon glyphicon-chevron-left left_trigger"></i>
+                    <ul class="top-menu" style="--separator-src: url(/dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/vertical-seperatore252.png);">
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Hot Games" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/hot-games.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/hot-games-active.svg);" width="30" /> Hot Games</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Slots" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/slots.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/slots-active.svg);" width="30" /> Slots</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Live Casino" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/casino.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/casino-active.svg);" width="30" /> Live Casino</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Race" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/race.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/race-active.svg);" width="30" /> Race</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Olahraga" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/sports.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/sports-active.svg);" width="30" /> Olahraga</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Crash Game" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/crash-game.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/crash-game-active.svg);" width="30" /> Crash Game</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Arcade" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/arcade.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/arcade-active.svg);" width="30" /> Arcade</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="E-Sports" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/e-sports.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/e-sports-active.svg);" width="30" /> E-Sports</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Sabung Ayam" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/cockfight.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/cockfight-active.svg);" width="30" /> Sabung Ayam</a></li>
+                        <li data-active="false"><a href="{{amphtml}}"><img alt="Promotion" height="30" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/promotion.svg" style="--image-src: url(https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/menu/promotion-active.svg);" width="30" /> Promosi</a></li>
+                    </ul>
+                    <i class="glyphicon glyphicon-chevron-right right_trigger"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ BANNER ============ -->
+<div class="banner">
+    <div id="banner_carousel" class="banner-carousel">
+        <div class=""><a href="{{amphtml}}" target="_self"><img src="https://ik.imagekit.io/alwayswin/bonus-new-member-100-63fa0f476eb5b.webp" alt="bonus new member {{brand_name}}" loading="lazy" /></a></div>
+        <div class="banner-group-vertical"><a href="{{amphtml}}" target="_self"><img src="https://ik.imagekit.io/alwayswin/sportsbook-bonus.webp" alt="slot88" loading="lazy" /></a></div>
+        <div class="banner-group-vertical"><a href="{{amphtml}}" target="_self"><img src="https://ik.imagekit.io/alwayswin/bonus-harian.webp" alt="welcome {{brand_name}}" loading="lazy" /></a></div>
+    </div>
+</div>
+
+<!-- ============ ANNOUNCEMENT ============ -->
+<div class="home-info-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="announcement-container">
+                    <ul class="announcement-list">
+                        <li><strong>Welcome to {{brand_name}}</strong></li>
+                        <li>{{title}}</li>
+                        <li>{{description}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ POPULAR GAMES ============ -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="popular-game-title-container">
+            <div class="container-title"><span>Game Populer</span></div>
+            <div class="container-content">
+                <div class="game-list">
+                    <div class="games-group">
+                        <div class="game-item" data-game="Sweet Bonanza Super Scatter">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvZm_dLA1fN6NsUVPAIiQ5GXVRcXH0KlZVgLEMR_MU700qyU9tagG6n_0&s=10" /><img alt="Sweet Bonanza Super Scatter" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvZm_dLA1fN6NsUVPAIiQ5GXVRcXH0KlZVgLEMR_MU700qyU9tagG6n_0&s=10" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Sweet Bonanza Super Scatter">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Sweet Bonanza Super Scatter</div>
+                        </div>
+                        <div class="game-item" data-game="Mahjong Ways">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/PGSOFT/PGSOFT_65.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/PGSOFT/PGSOFT_65.jpg" type="image/jpeg" /><img alt="Mahjong Ways" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/PGSOFT/PGSOFT_65e252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Mahjong Ways">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Mahjong Ways</div>
+                        </div>
+                    </div>
+                    <div class="games-group">
+                        <div class="game-item" data-game="Mahjong Wins 3 – Black Scatter">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://colombiagrasslands.com/wp-content/uploads/2026/04/9f38a856cf22313ee96e345de502934c.jpg" /><img alt="Mahjong Wins 3" loading="lazy" src="https://colombiagrasslands.com/wp-content/uploads/2026/04/9f38a856cf22313ee96e345de502934c.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Mahjong Wins 3 – Black Scatter">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Mahjong Wins 3 – Black Scatter</div>
+                        </div>
+                        <div class="game-item" data-game="Wukong - Black Scatter">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/SLOT88/vswayswkngblck.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/SLOT88/vswayswkngblck.jpg" type="image/jpeg" /><img alt="Wukong - Black Scatter" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/SLOT88/vswayswkngblcke252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Wukong - Black Scatter">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Wukong - Black Scatter</div>
+                        </div>
+                    </div>
+                    <div class="games-group">
+                        <div class="game-item" data-game="Sticky Bandits Thunder Rail">
+                            <div class="wrapper-container">
+                                <picture><img alt="Sticky Bandits Thunder Rail" loading="lazy" src="https://ik.imagekit.io/alwayswin/images.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Sticky Bandits Thunder Rail">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Sticky Bandits Thunder Rail</div>
+                        </div>
+                        <div class="game-item" data-game="Bang Gacor 1000">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/SLOT88/vs20gacorx.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/SLOT88/vs20gacorx.jpg" type="image/jpeg" /><img alt="Bang Gacor 1000" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/SLOT88/vs20gacorxe252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Bang Gacor 1000">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Bang Gacor 1000</div>
+                        </div>
+                    </div>
+                    <div class="games-group">
+                        <div class="game-item" data-game="Sugar Bang Bang 2">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/FACHAI/FACAHI_22071.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/FACHAI/FACAHI_22071.jpg" type="image/jpeg" /><img alt="Sugar Bang Bang 2" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/FACHAI/FACAHI_22071e252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Sugar Bang Bang 2">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Sugar Bang Bang 2</div>
+                        </div>
+                        <div class="game-item" data-game="Fortune Gems">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/JILI/JILI_109.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/JILI/JILI_109.jpg" type="image/jpeg" /><img alt="Fortune Gems" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/JILI/JILI_109e252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Fortune Gems">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Fortune Gems</div>
+                        </div>
+                    </div>
+                    <div class="games-group">
+                        <div class="game-item" data-game="Mahjong Ways 2">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/PGSOFT/PGSOFT_74.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/PGSOFT/PGSOFT_74.jpg" type="image/jpeg" /><img alt="Mahjong Ways 2" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/PGSOFT/PGSOFT_74e252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Mahjong Ways 2">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Mahjong Ways 2</div>
+                        </div>
+                        <div class="game-item" data-game="Gates of Olympus Super Scatter">
+                            <div class="wrapper-container">
+                                <picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/PP/vs20olympgold.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/providers/PP/vs20olympgold.jpg" type="image/jpeg" /><img alt="Gates of Olympus Super Scatter" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/providers/PP/vs20olympgolde252.jpg" /></picture>
+                                <div class="link-container"><a href="{{amphtml}}" class="play-now" data-game="Gates of Olympus Super Scatter">MAIN</a></div>
+                            </div>
+                            <div class="game-name">Gates of Olympus Super Scatter</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ TELEGRAM BANNER ============ -->
+<div class="telegram-banner-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{{amphtml}}" rel="nofollow" target="_blank">
+                    <picture><img alt="Telegram" loading="lazy" src="https://api.imghippo.com/files/IOH5990a.webp" /></picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" style="--image-src: url(/dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/footer-backgrounde252.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="footer-links">
+                    <li><a href="{{amphtml}}">Tentang {{brand_name}}</a></li>
+                    <li><a href="{{amphtml}}">Responsible Gambling</a></li>
+                    <li><a href="{{amphtml}}">Pusat Bantuan</a></li>
+                    <li><a href="{{amphtml}}">Syarat dan Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 copyright">&copy;2026 {{brand_name}}. Hak cipta dilindungi | 18+</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="footer-separator" />
+                <div class="site-description">
+                    <h1><span style="font-size: 18pt;">{{title}}</span></h1>
+                  <p>{{content}}</p>  </div>
+                <hr class="footer-separator" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 site-info-container">
+                <div class="site-info">
+                    <div class="site-info-title"><i data-icon="service" style="background-image: url(https://s12.gifyu.com/images/bhN9o.png);"></i><div><h3>PELAYANAN</h3><p>Keunggulan Pelayanan</p></div></div>
+                    <div class="site-info-description"><h4>DEPOSIT</h4><p>Rata-Rata Waktu</p><div><div id="deposit_progress" data-average-time="1.00"></div></div></div>
+                    <div class="site-info-description"><h4>PENARIKAN</h4><p>Rata-Rata Waktu</p><div><div id="withdrawal_progress" data-average-time="5.00"></div></div></div>
+                </div>
+            </div>
+            <div class="col-md-4 site-info-container">
+                <div class="site-info">
+                    <div class="site-info-title"><i data-icon="product" style="background-image: url(https://s12.gifyu.com/images/bhN9o.png);"></i><div><h3>PRODUK</h3><p>Keunggulan Produk</p></div></div>
+                    <div class="site-info-description with-seperator"><h4>TARUHAN SLOT</h4><p>Penyedia slot online dengan beragam pilihan game menarik...</p></div>
+                    <div class="site-info-description with-seperator"><h4>TARUHAN LIVE KASINO</h4><p>Platform Pilihan bagi perusahaan-perusahaan terbaik...</p></div>
+                    <div class="site-info-description with-seperator"><h4>TARUHAN OLAHRAGA</h4><p>Sportsbook Gaming Platform Terbaik...</p></div>
+                </div>
+            </div>
+            <div class="col-md-4 site-info-container">
+                <div class="site-info">
+                    <div class="site-info-title"><i data-icon="help-and-service" style="background-image: url(https://s12.gifyu.com/images/bhN9o.png);"></i><div><h3>BANTUAN & DUKUNGAN</h3><p>Servis Lainnya</p></div></div>
+                    <div class="site-info-description with-seperator support-container">
+                        <ul class="contact-list">
+                            <li><a href="{{amphtml}}" target="_blank" rel="noopener nofollow"><i><img alt="Contact" height="20" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/communications/telegram.svg" width="20" /></i> TELEGRAM</a></li>
+                            <li><a href="{{amphtml}}" target="_blank" rel="noopener nofollow"><i><img alt="Contact" height="20" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/communications/whatsapp.svg" width="20" /></i> WHATSAPP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-separator" />
+        <div class="row">
+            <div class="col-md-12">
+                <p class="footer-section-title">Platform Penyedia Layanan</p>
+                <div class="provider-container">
+                    <h5>Slots</h5>
+                    <ul class="hover-list">
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-7.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-7.png" type="image/png" /><img alt="Pragmatic Play" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-7e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-70.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-70.png" type="image/png" /><img alt="Jili" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-70e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-9.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-9.png" type="image/png" /><img alt="PG Soft" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-9e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-40.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-40.png" type="image/png" /><img alt="Slot88" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-40e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-98.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-98.png" type="image/png" /><img alt="Hacksaw" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-98e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-92.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-92.png" type="image/png" /><img alt="No Limit City" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-92e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-16.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-16.png" type="image/png" /><img alt="Habanero" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-16e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-17.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-17.png" type="image/png" /><img alt="MicroGaming" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-17e252.png" /></picture></li>
+                    </ul>
+                </div>
+                <div class="provider-container">
+                    <h5>Live Casino</h5>
+                    <ul class="hover-list">
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-1.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-1.png" type="image/png" /><img alt="ION Casino" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-1e252.png" /></picture></li>
+                        <li><picture><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-38.webp" type="image/webp" /><source srcset="https://dsuown9evwz4y.cloudfront.net/Images/v-normad-alpha/dark-gold/desktop/layout/providers/game-code-38.png" type="image/png" /><img alt="Evo Gaming" loading="lazy" src="https://dsuown9evwz4y.cloudfront.net/Images/_normad-alpha/dark-gold/desktop/layout/providers/game-code-38e252.png" /></picture></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ FLOATING ACTION BUTTON ============ -->
+
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+function closePopup() {
+    const popupOverlay = document.getElementById('popupOverlay');
+    if (!popupOverlay) return;
+    popupOverlay.style.opacity = '0';
+    popupOverlay.style.transition = 'opacity 0.3s ease';
+    setTimeout(function() { popupOverlay.style.display = 'none'; }, 300);
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const popupOverlay = document.getElementById('popupOverlay');
+    if (!popupOverlay) return;
+    popupOverlay.addEventListener('click', function(event) {
+        if (event.target === this) closePopup();
+    });
+    (function() {
+        var popup = document.getElementById('popupOverlay');
+        function checkMobile() {
+            if (window.innerWidth <= 480) popup.classList.add('popup-full-mobile');
+            else popup.classList.remove('popup-full-mobile');
+        }
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+    })();
+});
+</script>
+
+<script src='https://diy-rangka-rangking.design/bundles/desktop.js' defer></script>
+<script src='https://diy-rangka-rangking.design/bundles/Home/desktop.js' defer></script>
+<script src='https://diy-rangka-rangking.design/bundles/reserve.js' defer></script>
+
+</body>
+</html>
