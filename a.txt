@@ -1,0 +1,750 @@
+
+
+
+<!doctype html>
+<html amp lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b7a4a">
+
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{banner}}">
+  <meta property="og:url" content="{{canonical}}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{brand_name}}">
+  <meta name="twitter:creator" content="@{{brand_name}}">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{banner}}">
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{favicon}}">
+  <link rel="preload" href="{{favicon}}" as="image">
+  <link rel="preload" href="{{banner}}" as="image">
+  <link rel="preload" href="{{banner}}" as="image">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+    }
+
+    @-webkit-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+
+    @-moz-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+
+    @-ms-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+
+    @-o-keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+
+    @keyframes -amp-start {
+      from { visibility: hidden; }
+      to { visibility: visible; }
+    }
+  </style>
+
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+      }
+    </style>
+  </noscript>
+
+  <style amp-custom>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "ZCOOL QingKe HuangYou", Arial, sans-serif;
+      background-color: #000000;
+      color: #000000;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .contain {
+      width: 100%;
+      margin: 0 auto;
+      background-color: #000000;
+    }
+
+    @media (min-width: 992px) {
+      .contain {
+        width: 50%;
+      }
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: linear-gradient(180deg, #000000, #000000);
+      padding: 8px 12px;
+      border-bottom: 1px solid {{moneysite-link}};
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .navbar-wrap {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-wrap {
+        width: 50%;
+      }
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      border: none;
+      line-height: 1.2;
+    }
+
+    .btn-warning {
+      background: linear-gradient(180deg, #0077ff, #0077ff);
+      color: #000000;
+      border: 1px solid #000000;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.45);
+    }
+
+    .btn-telegram {
+      background: linear-gradient(180deg, #0077ff, #0077ff);
+      color: {{moneysite-link}};
+      border: 1px solid #000000;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-custom {
+      background: linear-gradient(180deg, #0077ff, #0077ff);
+      color: #02140f;
+      border: 1px solid #000000;
+      animation: goldGlow 1500ms infinite;
+    }
+
+    .telegram-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    @keyframes goldGlow {
+      0% {
+        box-shadow: 0 0 4px rgba(131, 212, 55, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 28px rgba(124, 255, 107, 0.9);
+      }
+
+      100% {
+        box-shadow: 0 0 4px rgba(105, 212, 55, 0.4);
+      }
+    }
+
+    .spacer {
+      width: 100%;
+      height: 76px;
+    }
+
+    .bottom-spacer {
+      width: 100%;
+      height: 86px;
+    }
+
+    .ptpb {
+      padding: 8px 12px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .bg-white {
+      background: linear-gradient(180deg, {{moneysite-link}}, {{moneysite-link}});
+    }
+
+    .live-title {
+      display: inline-block;
+      font-size: 50px;
+      line-height: 1.1;
+      margin-top: 4px;
+      color: #000000;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .button-row .btn {
+      width: 150px;
+    }
+
+    .worldcup-countdown {
+      margin: 14px auto 0;
+      padding: 18px 12px;
+      border: 1px solid {{moneysite-link}};
+      border-radius: 10px;
+      background: linear-gradient(180deg, #ffd919, {{moneysite-link}});
+      max-width: 980px;
+      text-align: center;
+      box-shadow: inset 0 0 18px #000000, 0 0 12px rgb(255, 210, 0);
+    }
+
+    .worldcup-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .worldcup-logo {
+      filter: drop-shadow(0 0 10px rgba(255, 216, 107, 0.85));
+    }
+
+    .worldcup-title {
+      text-align: left;
+      line-height: 1.1;
+    }
+
+    .worldcup-title strong {
+      display: block;
+      color: #000000;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .worldcup-title span {
+      display: block;
+      color: #000000;
+      font-size: 12px;
+    }
+
+    .worldcup-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .worldcup-box {
+      width: 58px;
+      min-height: 60px;
+      border: 1px solid {{moneysite-link}};
+      border-radius: 6px;
+      background: #02140f;
+      padding: 8px 4px 6px;
+      box-shadow: inset 0 0 10px rgba(37, 211, 102, 0.22);
+    }
+
+    .worldcup-number {
+      display: block;
+      color: {{moneysite-link}};
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 900;
+      text-shadow: 0 0 8px rgba(255, 216, 107, 0.55);
+    }
+
+    .worldcup-label {
+      display: block;
+      color: #ffffff;
+      font-size: 10px;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    .link-section {
+      padding-top: 6px;
+    }
+
+    .link-box {
+      border: 2px solid #000000;
+      padding: 10px;
+      margin-top: 8px;
+      background: {{moneysite-link}};
+      box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.16);
+    }
+
+    .link-row {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      align-items: center;
+      border-bottom: 1px solid rgb(0, 0, 0);
+      padding: 12px 0;
+      gap: 8px;
+    }
+
+    .link-row:last-child {
+      border-bottom: none;
+    }
+
+    .link-col {
+      font-size: 14px;
+    }
+
+    .link-name {
+      text-align: left;
+      color: #000000;
+    }
+
+    .link-status {
+      text-align: center;
+    }
+
+    .link-action {
+      text-align: right;
+    }
+
+    .online {
+      color: {{moneysite-link}};
+      font-weight: 700;
+      text-shadow: 0 0 6px rgb(255, 210, 0);
+    }
+
+    .link-action .btn {
+      padding: 7px 12px;
+      font-size: 16px;
+      min-width: 88px;
+    }
+
+    .spinner-grow {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      vertical-align: middle;
+      background-color: currentColor;
+      border-radius: 50%;
+      opacity: 0;
+      animation: spinner-grow .75s linear infinite;
+    }
+
+    @keyframes spinner-grow {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .card {
+      background: {{moneysite-link}};
+      border: 1px solid {{moneysite-link}};
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    .card-title {
+      background: linear-gradient(180deg, #000000, #000000);
+      padding: 12px;
+      border-bottom: 1px solid {{moneysite-link}};
+    }
+
+    .card-title h1 {
+      margin: 0;
+      font-size: 22px;
+      color: {{moneysite-link}};
+    }
+
+    .card-body {
+      padding: 18px;
+      background: {{moneysite-link}};
+    }
+
+    .card-body h2 {
+      margin: 0;
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.4;
+      color: #000000;
+    }
+
+    .copyright {
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 14px;
+      color: {{moneysite-link}};
+    }
+
+    .footer-buttons {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      background: linear-gradient(180deg, #000000, #000000);
+      padding: 8px;
+      border-top: 1px solid {{moneysite-link}};
+      box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .footer-buttons-inner {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    @media (min-width: 992px) {
+      .footer-buttons-inner {
+        width: 50%;
+      }
+    }
+
+    .footer-buttons .btn {
+      width: 100%;
+      font-size: 18px;
+      padding: 10px 8px;
+    }
+
+    @media (max-width: 767px) {
+      .navbar-inner {
+        justify-content: center;
+      }
+
+      .nav-buttons {
+        display: none;
+      }
+
+      .live-title {
+        font-size: 34px;
+      }
+
+      .worldcup-countdown {
+        margin-top: 14px;
+        padding: 16px 8px;
+      }
+
+      .worldcup-title strong {
+        font-size: 15px;
+      }
+
+      .worldcup-box {
+        width: 52px;
+      }
+
+      .worldcup-number {
+        font-size: 23px;
+      }
+
+      .link-box {
+        padding: 8px 10px;
+        margin-top: 6px;
+      }
+
+      .link-row {
+        grid-template-columns: 1fr 0.72fr 0.78fr;
+        gap: 5px;
+        padding: 10px 0;
+      }
+
+      .link-col {
+        font-size: 12px;
+      }
+
+      .link-name {
+        text-align: left;
+      }
+
+      .link-status {
+        text-align: center;
+      }
+
+      .link-action {
+        text-align: right;
+      }
+
+      .link-action .btn {
+        font-size: 13px;
+        padding: 6px 8px;
+        min-width: 72px;
+      }
+
+      .spinner-grow {
+        width: 9px;
+        height: 9px;
+      }
+
+      .footer-buttons .btn {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .link-col {
+        font-size: 11px;
+      }
+
+      .link-action .btn {
+        font-size: 12px;
+        min-width: 66px;
+        padding: 6px 6px;
+      }
+
+      .footer-buttons .btn {
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{canonical}}"
+      },
+      "headline": "{{title}}",
+      "description": "{{description}}",
+      "image": "{{banner}}",
+      "author": {
+        "@type": "Organization",
+        "name": "{{brand_name}}",
+        "url": "{{canonical}}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{brand_name}}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{logo}}"
+        }
+      },
+      "datePublished": "2025",
+      "dateModified": "2025"
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-wrap">
+      <div class="navbar-inner">
+        <a href="{{canonical}}" aria-label="{{brand_name}}">
+          <amp-img
+            alt="{{brand_name}}"
+            src="{{logo}}"
+            width="180"
+            height="55"
+            layout="fixed">
+          </amp-img>
+        </a>
+
+        <div class="nav-buttons">
+          <a class="btn btn-warning" href="{{moneysite-link}}" rel="nofollow noopener" target="_blank">LOGIN</a>
+          <a class="btn btn-custom" href="{{moneysite-link}}" rel="nofollow noopener" target="_blank">DAFTAR</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <div class="contain">
+    <amp-img
+      src="{{banner}}"
+      alt="{{brand_name}}"
+      layout="responsive"
+      width="600"
+      height="472">
+    </amp-img>
+  </div>
+
+  <div class="contain bg-white ptpb">
+    <div class="text-center">
+      <p>
+        <b class="live-title">Live Chat 24 JAM</b><br>
+        Pelayanan 24 jam nonstop. Jika ada kendala, klik tombol di bawah ini.
+      </p>
+
+      <div class="button-row">
+        <a href="{{moneysite-link}}" class="btn btn-warning" rel="nofollow noopener" target="_blank">
+          💬 LIVE CHAT
+        </a>
+
+        <a href="{{moneysite-link}}" class="btn btn-telegram" rel="nofollow noopener" target="_blank">
+          <span class="telegram-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 240 240" fill="currentColor">
+              <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm55.6 80.3-19.7 92.7c-1.5 6.6-5.4 8.2-10.9 5.1l-30.2-22.3-14.6 14.1c-1.6 1.6-3 3-6.1 3l2.2-30.7 55.9-50.5c2.4-2.2-.5-3.4-3.8-1.2l-69.1 43.5-29.7-9.3c-6.5-2-6.6-6.5 1.4-9.6l116.1-44.8c5.4-2 10.1 1.3 8.5 10z"/>
+            </svg>
+          </span>
+          TELEGRAM
+        </a>
+      </div>
+
+      <div class="worldcup-countdown">
+       
+
+        <amp-date-countdown
+          end-date="2026-06-11T19:00:00-05:00"
+          layout="fixed-height"
+          height="72">
+          <template type="amp-mustache">
+            <div class="worldcup-boxes">
+              <div class="worldcup-box">
+                <span class="worldcup-number">{{dd}}</span>
+                <span class="worldcup-label">Hari</span>
+              </div>
+
+              <div class="worldcup-box">
+                <span class="worldcup-number">{{hh}}</span>
+                <span class="worldcup-label">Jam</span>
+              </div>
+
+              <div class="worldcup-box">
+                <span class="worldcup-number">{{mm}}</span>
+                <span class="worldcup-label">Menit</span>
+              </div>
+
+              <div class="worldcup-box">
+                <span class="worldcup-number">{{ss}}</span>
+                <span class="worldcup-label">Detik</span>
+              </div>
+            </div>
+          </template>
+        </amp-date-countdown>
+      </div>
+    </div>
+  </div>
+
+  <div class="contain bg-white ptpb link-section">
+    <div class="link-box">
+      <div class="link-row">
+        <div class="link-col link-name">
+          Link Versi Mobile
+        </div>
+
+        <div class="link-col link-status online">
+          <span class="spinner-grow"></span> ONLINE
+        </div>
+
+        <div class="link-col link-action">
+          <a class="btn btn-warning" href="{{moneysite-link}}" rel="nofollow noopener" target="_blank">
+            🔐 LOGIN
+          </a>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-col link-name">
+          Promo Bola
+        </div>
+
+        <div class="link-col link-status online">
+          <span class="spinner-grow"></span> ONLINE
+        </div>
+
+        <div class="link-col link-action">
+          <a class="btn btn-warning" href="{{moneysite-link}}" rel="nofollow noopener" target="_blank">
+            🎁 PROMO
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contain">
+    <div class="card text-center ptpb">
+      <div class="card-title">
+        <h1>{{title}}</h1>
+      </div>
+
+      <div class="card-body">
+        <h2>
+          {{description}}
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    Copyright SEOMAGANG 2026 - {{brand_name}}, All Rights Reserved.
+  </div>
+
+  <div class="bottom-spacer"></div>
+
+  <div class="footer-buttons">
+    <div class="footer-buttons-inner">
+      <a href="{{moneysite-link}}" class="btn btn-warning" rel="nofollow noopener" target="_blank">
+       LOGIN DISINI
+      </a>
+
+      <a href="{{moneysite-link}}" class="btn btn-custom" rel="nofollow noopener" target="_blank">
+        DAFTAR DISINI
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
