@@ -1,0 +1,159 @@
+{{title}}           -> Judul SEO (Diambil dari Kolom A Autofill).
+{{description}}     -> Meta Description (Diambil dari Kolom A Autofill).
+{{brand_name}}      -> Nama Brand dari Asset (Contoh: BONAFIT88).
+{{content}}         -> Konten Utama (Diambil dari Kolom B Autofill).
+{{canonical}}       -> Link URL Canonical halaman.
+{{amphtml}}         -> Otomatis terisi "amp.html" untuk validasi AMP.
+{{logo}}            -> Link URL Asset Logo.
+{{favicon}}         -> Link URL Asset Favicon.
+{{banner}}          -> Link URL Banner Promosi.
+{{moneysite-link}}  -> Link tujuan utama (Tombol Daftar/Login).
+{{color_theme}}     -> Pilihan warna LP dan AMP
+<!DOCTYPE html>
+<html amp lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="page-locale" content="id,en" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="language" content="indonesian" />
+    <meta name="theme-color" content="#007fa0" />
+    <meta name="geo.placename" content="DKI Jakarta" />
+    <meta name="geo.country" content="ID" />
+    <meta name="geo.region" content="ID" />
+    <meta name="tgn.nation" content="Indonesia" />
+    <link rel="canonical" href="{{canonical}}" />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="og:site_name" content="{{brand_name}}" />
+    <meta property="og:image:alt" content="{{brand_name}}" />
+    <meta property="og:image" content="{{banner}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:locale" content="ID_id" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:image:src" content="{{banner}}" />
+    <link rel="shortcut icon" type="image/x-png" href="{{favicon}}" />
+    <link rel="preload" as="image" href="{{canonical}}" />
+    <link rel="preload" as="image" href="{{banner}}" />
+    <link rel="preload" as="image" href="https://imagedelivery.net/gpcZS2KNRClaI1DXk20rLg/3ee62efd-3ce0-4dd2-1928-a84b6f99d900/public" />
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
+    <link rel="icon" type="image/png" href="{{favicon}}" sizes="16x16">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+           -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+           -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+           animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+      @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <style amp-custom>
+      body{background:linear-gradient(135deg,#000 0,#1c1c1c 100%);
+           color:#fff;font-family:'Exo 2',sans-serif;margin:0;padding:0}
+      .content-wrapper{max-width:900px;margin:0 auto;overflow:hidden;
+           position:relative;border-left:3px solid rgb(8, 8, 8);border-right:3px solid #000;
+           box-shadow:0 0 15px #000}
+      .header{background:linear-gradient(135deg,{{color_theme}} 0,#000 100%);
+           padding:5px;display:flex;justify-content:center;align-items:center;
+           border-bottom:2px solid #000;text-shadow:0 0 5px #000}
+      .top-bar{background:linear-gradient(90deg,{{color_theme}} 0,#000 100%);
+           padding:3px;text-align:center;color:#fff;font-weight:700;
+           border-bottom:2px solid ##000;overflow:hidden;white-space:nowrap}
+      .scrolling-text{display:inline-block;animation:scroll-left 6s linear infinite}
+      @keyframes scroll-left{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+      .main-banner{padding:5px 0;text-align:center}
+      .main-banner amp-img{width:100%;height:auto;max-height:500px;
+           object-fit:cover;border:2px solid #e2e9b1;box-shadow:0 0 10px #e2e9b1}
+      .button-container{display:flex;justify-content:space-around;margin:5px 0;gap:5px}
+      .button{padding:10px;color:#fff;background:linear-gradient(135deg,#002ad2 0,#000 100%);
+           border:none;border-radius:5px;text-align:center;text-decoration:none;
+           font-weight:700;flex:1;box-shadow:0 0 10px #00c9ff}
+      .button.daftar{animation:pulsate 1.5s ease-in-out infinite;
+           background:linear-gradient(135deg,#3127e3 0,#000 100%);color:#fff;
+           box-shadow:0 0 10px #000}
+      @keyframes pulsate{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+      .progressive-jackpot{position:relative;background:linear-gradient(135deg,#141414 0,#333 100%);
+           padding:5px;text-align:center;margin:5px 0;border:2px solid #000;
+           border-radius:5px;box-shadow:0 0 10px #000}
+      .main-text{text-align:center;font-size:1.2rem;font-weight:700;margin:5px 0;
+           color:#fff;text-shadow:0 0 10px #000}
+      .info-table{width:100%;margin:10px 0;border:2px solid #000;padding:10px;
+           background-color:#222;border-radius:5px}
+      .info-table table{width:100%;border-collapse:collapse;color:#fff}
+      .info-table td,.info-table th{padding:8px;text-align:left}
+      .info-table tr:nth-child(odd){background-color:#333}
+      .article-section{margin:20px 0;padding:10px;background:linear-gradient(135deg,#141414 0,#333 100%);
+           border:2px solid #000;border-radius:5px;box-shadow:0 0 15px #000}
+      .article-section h3{margin-top:0;color:##000;font-size:1.2rem;text-align:center;
+           text-shadow:0 0 10px ##000}
+      .article-section p{color:#fff;text-align:justify}
+      .m4xw1n138{background:linear-gradient(135deg,#141414 0,#222 100%);
+           padding:5px;text-align:center;color:##000;border-top:2px solid ##000;
+           box-shadow:0 0 10px ##000}
+      .m4xw1n138 a{color:##000;text-decoration:none;text-shadow:0 0 5px ##000}
+      @media only screen and (max-width:600px){.content-wrapper{max-width:100%;padding:0}}
+    </style>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="top-bar">
+        <div class="scrolling-text">{{title}}</div>
+      </div>
+      <header class="header">
+        <amp-img src="{{canonical}}" alt="{{brand_name}}" width="200" height="50" layout="fixed"></amp-img>
+      </header>
+
+      <!-- Banner -->
+      <div class="main-banner">
+        <amp-img
+          src="{{banner}}"
+          alt="{{brand_name}}"
+          width="500"
+          height="500"
+          layout="responsive">
+        </amp-img>
+      </div>
+
+      <div class="button-container">
+        <a href="{{moneysite-link}}" class="button" rel="noopener nofollow">MASUK</a>
+        <a href="{{moneysite-link}}" class="button daftar" rel="noopener nofollow">DAFTAR</a>
+      </div>
+
+      <div class="main-text">
+        <h3>{{title}}</h3>
+      </div>
+      <div class="info-table">
+        <table>
+          <tr><th>Nama Website</th><td>{{brand_name}}</td></tr>
+          <tr><th>Minimal Deposit</th><td>10,000 IDR</td></tr>
+          <tr><th>Minimal Withdraw</th><td>50,000 IDR</td></tr>
+          <tr><th>Proses Depo / WD</th><td>1-2 Menit</td></tr>
+          <tr><th>Metode Transaksi</th><td>Bank Lokal Indonesia, Qris, E Wallet DANA &amp; Gopay</td></tr>
+          <tr><th>Winrate Kemenangan</th><td>Pasti Gacor!</td></tr>
+        </table>
+      </div>
+      <div class="article-section">
+        <div class="text-justify">
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+    <footer class="m4xw1n138"> Copyright © SEOMAGANG {{brand_name}}
+    </footer>
+  </body>
+</html>
