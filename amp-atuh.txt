@@ -1,15 +1,4 @@
-{{title}}           -> Judul SEO (Diambil dari Kolom A Autofill).
-{{description}}     -> Meta Description (Diambil dari Kolom A Autofill).
-{{brand_name}}      -> Nama Brand dari Asset (Contoh: BONAFIT88).
-{{content}}         -> Konten Utama (Diambil dari Kolom B Autofill).
-{{canonical}}       -> Link URL Canonical halaman.
-{{amphtml}}         -> Otomatis terisi "amp.html" untuk validasi AMP.
-{{logo}}            -> Link URL Asset Logo.
-{{favicon}}         -> Link URL Asset Favicon.
-{{banner}}          -> Link URL Banner Promosi.
-{{moneysite-link}}  -> Link tujuan utama (Tombol Daftar/Login).
-{{color_theme}}     -> Pilihan warna LP dan AMP
-<!DOCTYPE html>
+
 <html amp lang="id">
   <head>
     <meta charset="utf-8" />
